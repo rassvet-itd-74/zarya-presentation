@@ -1,0 +1,154 @@
+/* Zarya palette — variables injected from colors.ts via SlideWrapper */
+
+.reveal .slides section.has-dark-background {
+  --r-main-font-size: 34px;
+  --r-block-margin: 10px;
+  --r-heading-margin: 0 0 10px 0;
+  --r-heading4-size: 1em;
+  --r-main-color: var(--z-text);
+  --r-heading-color: var(--z-peach);
+  --r-link-color: var(--z-peach);
+
+  color: var(--z-text);
+  text-align: left;
+}
+
+.reveal .slides section.has-dark-background h1,
+.reveal .slides section.has-dark-background h2 {
+  color: var(--z-peach);
+  text-shadow: 0 2px 12px color-mix(in srgb, var(--z-brand) 40%, transparent);
+}
+
+.reveal .slides section.has-dark-background h3 {
+  color: var(--z-peach);
+  font-size: 0.95em;
+  margin: 0 0 0.35em;
+}
+
+.reveal .slides section.has-dark-background h4 {
+  color: var(--z-text);
+  border-left: 3px solid var(--z-brand);
+  padding-left: 0.45em;
+  margin-left: -0.45em;
+}
+
+.reveal .slides section.has-dark-background small {
+  color: var(--z-sec);
+}
+
+.reveal .slides section.has-dark-background .slide-label small {
+  color: var(--z-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.55em;
+}
+
+.reveal .slides section.has-dark-background ul,
+.reveal .slides section.has-dark-background ol {
+  display: block;
+  margin: 0 0 0 1em;
+}
+
+.reveal .slides section.has-dark-background li {
+  margin-bottom: 0.25em;
+  line-height: 1.25;
+  color: var(--z-text);
+}
+
+.reveal .slides section.has-dark-background li::marker {
+  color: var(--z-peach);
+}
+
+.reveal .slides section.has-dark-background table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.reveal .slides section.has-dark-background table th {
+  color: var(--z-peach);
+  border-bottom: 2px solid var(--z-brand);
+  font-weight: 600;
+}
+
+.reveal .slides section.has-dark-background table td {
+  color: var(--z-text);
+  border-bottom: 1px solid var(--z-subtle);
+}
+
+.reveal .slides section.has-dark-background table td:first-child {
+  color: var(--z-amber);
+  font-weight: 600;
+}
+
+.reveal .slides section.has-dark-background table:has(th:nth-child(3)) td:nth-child(2) {
+  color: var(--z-peach);
+}
+
+.reveal .slides section.has-dark-background table:has(th:nth-child(3)) td:nth-child(3) {
+  color: var(--z-sec);
+}
+
+.reveal .slides section.has-dark-background table:not(:has(th:nth-child(3))) td:nth-child(2) {
+  color: var(--z-text);
+}
+
+.reveal .slides section.has-dark-background table:not(:has(th:nth-child(3))) td:first-child {
+  white-space: nowrap;
+}
+
+.reveal .slides section.has-dark-background table.table-people td:first-child {
+  color: var(--z-peach);
+}
+
+.reveal .slides section.has-dark-background table.table-people td:nth-child(2) {
+  color: var(--z-sec);
+}
+
+.reveal .slides section.has-dark-background table th,
+.reveal .slides section.has-dark-background table td {
+  padding: 0.15em 0.45em;
+  line-height: 1.25;
+}
+
+.reveal .slides section.has-dark-background .slide-columns {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.reveal .slides section.has-dark-background .slide-columns > div {
+  flex: 1;
+}
+
+.reveal .slides section.has-dark-background .list-danger li::marker {
+  color: var(--z-red);
+}
+
+.reveal .slides section.has-dark-background .list-success li::marker {
+  color: var(--z-green);
+}
+
+.reveal .slides section.has-dark-background .list-muted li::marker {
+  color: var(--z-muted);
+}
+
+/* Color utility classes (match colors.ts keys) */
+.z-bg      { color: var(--z-bg); }
+.z-card    { color: var(--z-card); }
+.z-subtle  { color: var(--z-subtle); }
+.z-text    { color: var(--z-text); }
+.z-sec     { color: var(--z-sec); }
+.z-muted   { color: var(--z-muted); }
+.z-brand   { color: var(--z-brand); }
+.z-peach   { color: var(--z-peach); }
+.z-border  { color: var(--z-border); }
+.z-green   { color: var(--z-green); }
+.z-red     { color: var(--z-red); }
+.z-redDark { color: var(--z-red-dark); }
+.z-amber   { color: var(--z-amber); }
+.z-yellow  { color: var(--z-yellow); }
+.z-darkBg  { color: var(--z-bg); }
+.z-darkRed { color: var(--z-red-dark); }
+.z-slate   { color: var(--z-slate); }

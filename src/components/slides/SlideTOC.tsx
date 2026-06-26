@@ -1,21 +1,23 @@
 import { Fragment } from '@revealjs/react';
+import type { ReactNode } from 'react';
 import { SlideHeader } from '../SlideHeader';
 import { SlideWrapper } from '../SlideWrapper';
+import { T } from './T';
 
-type TOCEntry = [num: string, topic: string, details: string];
+type TOCEntry = [num: string, topic: ReactNode, details: ReactNode];
 
 const tocRows: TOCEntry[] = [
-  ['1', 'Первый документ с предложением', 'История создания и модель Зари'],
-  ['2', 'Смарт-контракты', 'Две версии контракта. Хронология авг 2025 — июн 2026'],
-  ['3', 'Версии UI', 'MetaMask Snaps, Web UI v1 и v2, Standalone UI v1 и v2'],
-  ['4', 'Региональные тесты', 'Два теста, успехи, выявленные баги'],
-  ['5', 'Почему так долго?', 'Дефицит ресурсов, сложность продукта'],
-  ['6', 'Итоги и планы', 'Что сделано, что дальше'],
+  ['1', 'Первый документ с предложением', <>История создания и <T c="peach">модель Зари</T></>],
+  ['2', <T c="peach">Смарт-контракты</T>, <>Две версии контракта. Хронология <T c="amber">авг 2025 — июн 2026</T></>],
+  ['3', 'Версии UI', <>MetaMask Snaps, Web UI v1 и v2, <T c="green">Standalone UI v2</T></>],
+  ['4', 'Региональные тесты', <>Два теста, <T c="green">успехи</T>, <T c="red">выявленные баги</T></>],
+  ['5', 'Почему так долго?', <><T c="red">Дефицит ресурсов</T>, сложность продукта</>],
+  ['6', 'Итоги и планы', <>Что сделано, <T c="amber">что дальше</T></>],
 ];
 
 function TOCTable({ rows }: { rows: TOCEntry[] }) {
   return (
-    <table className="r-stretch">
+    <table>
       <thead>
         <tr><th>#</th><th>Тема</th><th>Подробности</th></tr>
       </thead>
@@ -35,7 +37,7 @@ export function SlideTOC1() {
     <SlideWrapper>
       <SlideHeader
         label="Содержание · 1/2"
-        title="Хронология: от создания на ЦС до последнего теста"
+        title={<>Хронология: от <T c="peach">ЦС</T> до последнего теста</>}
       />
       <TOCTable rows={tocRows.slice(0, 3)} />
     </SlideWrapper>
@@ -47,7 +49,7 @@ export function SlideTOC2() {
     <SlideWrapper>
       <SlideHeader
         label="Содержание · 2/2"
-        title="Хронология: от создания на ЦС до последнего теста"
+        title={<>Хронология: от <T c="peach">ЦС</T> до последнего теста</>}
       />
       <TOCTable rows={tocRows.slice(3)} />
     </SlideWrapper>

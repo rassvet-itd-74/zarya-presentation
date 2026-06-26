@@ -5,9 +5,9 @@ interface SlideHeaderProps {
 
 export function SlideHeader({ label, title }: SlideHeaderProps) {
   return (
-    <>
-      <p><small>{label}</small></p>
+    <header className="slide-header">
+      {label ? <p className="slide-label"><small>{label}</small></p> : null}
       <h4>{title}</h4>
-    </>
+    </header>
   );
 }

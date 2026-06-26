@@ -1,24 +1,57 @@
-import { Fragment } from '@revealjs/react';
+import type { ReactNode } from 'react';
 import { SlideHeader } from '../SlideHeader';
 import { SlideWrapper } from '../SlideWrapper';
+import { T } from './T';
 
-export function SlideParticipants() {
+type Participant = [name: ReactNode, role: ReactNode];
+
+const participants: Participant[] = [
+  ['Бедрин Олег', 'куратор по продуктовой работе'],
+  ['Бурцев Даниил', 'куратор по организационной работе'],
+  ['Скриптунова Елена', 'специалист-социолог'],
+  ['Ивашко Роман', 'специалист-социолог'],
+  ['Вертушкин Георгий', <>специалист по <T c="amber">Data Science</T></>],
+  ['Самодуров Александр', <T c="peach">Frontend разработчик</T>],
+];
+
+function ParticipantsTable({ rows }: { rows: Participant[] }) {
+  return (
+    <table className="table-people">
+      <thead>
+        <tr><th>Имя</th><th>Роль</th></tr>
+      </thead>
+      <tbody>
+        {rows.map(([name, role], i) => (
+          <tr key={i}>
+            <td>{name}</td>
+            <td>{role}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+export function SlideParticipants1() {
   return (
     <SlideWrapper>
-      <SlideHeader label="" title="Участники проекта" />
-      <table className="r-stretch">
-        <thead>
-          <tr><th>Имя</th><th>Роль</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Бедрин Олег</td><td>куратор по продуктовой работе</td></tr>
-          <tr><td>Бурцев Даниил</td><td>куратор по организационной работе</td></tr>
-          <tr><td>Скриптунова Елена</td><td>специалист-социолог</td></tr>
-          <tr><td>Ивашко Роман</td><td>специалист-социолог</td></tr>
-          <tr><td>Вертушкин Георгий</td><td>специалист по Data Science</td></tr>
-          <tr><td>Самодуров Александр</td><td>Frontend разработчик</td></tr>
-        </tbody>
-      </table>
+      <SlideHeader
+        label="Участники · 1/2"
+        title={<>Участники <T c="peach">проекта</T></>}
+      />
+      <ParticipantsTable rows={participants.slice(0, 3)} />
+    </SlideWrapper>
+  );
+}
+
+export function SlideParticipants2() {
+  return (
+    <SlideWrapper>
+      <SlideHeader
+        label="Участники · 2/2"
+        title={<>Участники <T c="peach">проекта</T></>}
+      />
+      <ParticipantsTable rows={participants.slice(3)} />
     </SlideWrapper>
   );
 }

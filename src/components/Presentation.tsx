@@ -4,22 +4,23 @@ import RevealMenu from 'reveal.js-menu/menu.esm.js';
 import 'reveal.js/reveal.css';
 import 'reveal.js-menu/menu.css';
 import 'reveal.js-menu/font-awesome/css/all.css';
+import '../presentation.css';
 import { SlideTitle } from './slides/SlideTitle';
-import { SlideParticipants } from './slides/SlideParticipants';
+import { SlideParticipants1, SlideParticipants2 } from './slides/SlideParticipants';
 import { SlideTOC1, SlideTOC2 } from './slides/SlideTOC';
 import { SlideProposal } from './slides/SlideProposal';
 import { SlideModel } from './slides/SlideModel';
 import { SlideContractTimeline1, SlideContractTimeline2 } from './slides/SlideContractTimeline';
 import { SlideContractVersions } from './slides/SlideContractVersions';
-import { SlideUIOverview } from './slides/SlideUIOverview';
+import { SlideUIOverview1, SlideUIOverview2 } from './slides/SlideUIOverview';
 import { SlideSnaps } from './slides/SlideSnaps';
 import { SlideWebUI1 } from './slides/SlideWebUI1';
 import { SlideWebUI2 } from './slides/SlideWebUI2';
 import { SlideStandaloneV1 } from './slides/SlideStandaloneV1';
-import { SlideStandaloneV2 } from './slides/SlideStandaloneV2';
-import { SlideTestsOverview } from './slides/SlideTestsOverview';
+import { SlideStandaloneV2_1, SlideStandaloneV2_2 } from './slides/SlideStandaloneV2';
+import { SlideTestsOverview1, SlideTestsOverview2 } from './slides/SlideTestsOverview';
 import { SlideBugs1, SlideBugs2 } from './slides/SlideBugs';
-import { SlideWhySoLong } from './slides/SlideWhySoLong';
+import { SlideWhySoLong1, SlideWhySoLong2 } from './slides/SlideWhySoLong';
 import { SlideResults } from './slides/SlideResults';
 import { SlidePlans } from './slides/SlidePlans';
 import { SlideClosing } from './slides/SlideClosing';
@@ -32,6 +33,8 @@ export function Presentation() {
       <Deck
         plugins={[MermaidPlugin, RevealMenu]}
         config={{
+          embedded: true,
+          center: false,
           menu: {
             loadIcons: false,
             themes: [
@@ -60,7 +63,8 @@ export function Presentation() {
         } as any}
       >
         <SlideTitle />
-        <SlideParticipants />
+        <SlideParticipants1 />
+        <SlideParticipants2 />
         <SlideTOC1 />
         <SlideTOC2 />
         <SlideProposal />
@@ -68,16 +72,20 @@ export function Presentation() {
         <SlideContractTimeline1 />
         <SlideContractTimeline2 />
         <SlideContractVersions />
-        <SlideUIOverview />
+        <SlideUIOverview1 />
+        <SlideUIOverview2 />
         <SlideSnaps />
         <SlideWebUI1 />
         <SlideWebUI2 />
         <SlideStandaloneV1 />
-        <SlideStandaloneV2 />
-        <SlideTestsOverview />
+        <SlideStandaloneV2_1 />
+        <SlideStandaloneV2_2 />
+        <SlideTestsOverview1 />
+        <SlideTestsOverview2 />
         <SlideBugs1 />
         <SlideBugs2 />
-        <SlideWhySoLong />
+        <SlideWhySoLong1 />
+        <SlideWhySoLong2 />
         <SlideResults />
         <SlidePlans />
         <SlideClosing />
