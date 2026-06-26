@@ -7,7 +7,6 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import './theme.scss';
 import { Presentation } from "@/components/Presentation";
 
 const elem = document.getElementById("root")!;

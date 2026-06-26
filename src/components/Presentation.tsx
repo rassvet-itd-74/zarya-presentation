@@ -5,9 +5,25 @@ import 'reveal.js/reveal.css';
 import 'reveal.js-menu/menu.css';
 import 'reveal.js-menu/font-awesome/css/all.css';
 
-import { Slide01Title } from './slides/Slide01Title';
-import { Slide01bParticipants } from './slides/Slide01bParticipants';
-import { Slide02TOC } from './slides/Slide02TOC';
+import { SlideTitle } from './slides/SlideTitle';
+import { SlideParticipants } from './slides/SlideParticipants';
+import { SlideTOC } from './slides/SlideTOC';
+import { SlideProposal } from './slides/SlideProposal';
+import { SlideModel } from './slides/SlideModel';
+import { SlideContractTimeline } from './slides/SlideContractTimeline';
+import { SlideContractVersions } from './slides/SlideContractVersions';
+import { SlideUIOverview } from './slides/SlideUIOverview';
+import { SlideSnaps } from './slides/SlideSnaps';
+import { SlideWebUI1 } from './slides/SlideWebUI1';
+import { SlideWebUI2 } from './slides/SlideWebUI2';
+import { SlideStandaloneV1 } from './slides/SlideStandaloneV1';
+import { SlideStandaloneV2 } from './slides/SlideStandaloneV2';
+import { SlideTestsOverview } from './slides/SlideTestsOverview';
+import { SlideBugs } from './slides/SlideBugs';
+import { SlideWhySoLong } from './slides/SlideWhySoLong';
+import { SlideResults } from './slides/SlideResults';
+import { SlidePlans } from './slides/SlidePlans';
+import { SlideClosing } from './slides/SlideClosing';
 
 const isPrintPDF = typeof window !== 'undefined' && window.location.search.includes('print-pdf');
 
@@ -44,9 +60,25 @@ export function Presentation() {
           pdfSeparateFragments: false,
         } as any}
       >
-        <Slide01Title />
-        <Slide01bParticipants />
-        <Slide02TOC />
+        <SlideTitle />
+        <SlideParticipants />
+        <SlideTOC />
+        <SlideProposal />
+        <SlideModel />
+        <SlideContractTimeline />
+        <SlideContractVersions />
+        <SlideUIOverview />
+        <SlideSnaps />
+        <SlideWebUI1 />
+        <SlideWebUI2 />
+        <SlideStandaloneV1 />
+        <SlideStandaloneV2 />
+        <SlideTestsOverview />
+        <SlideBugs />
+        <SlideWhySoLong />
+        <SlideResults />
+        <SlidePlans />
+        <SlideClosing />
       </Deck>
     </div>
   );
