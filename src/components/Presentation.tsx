@@ -4,13 +4,12 @@ import RevealMenu from 'reveal.js-menu/menu.esm.js';
 import 'reveal.js/reveal.css';
 import 'reveal.js-menu/menu.css';
 import 'reveal.js-menu/font-awesome/css/all.css';
-
 import { SlideTitle } from './slides/SlideTitle';
 import { SlideParticipants } from './slides/SlideParticipants';
-import { SlideTOC } from './slides/SlideTOC';
+import { SlideTOC1, SlideTOC2 } from './slides/SlideTOC';
 import { SlideProposal } from './slides/SlideProposal';
 import { SlideModel } from './slides/SlideModel';
-import { SlideContractTimeline } from './slides/SlideContractTimeline';
+import { SlideContractTimeline1, SlideContractTimeline2 } from './slides/SlideContractTimeline';
 import { SlideContractVersions } from './slides/SlideContractVersions';
 import { SlideUIOverview } from './slides/SlideUIOverview';
 import { SlideSnaps } from './slides/SlideSnaps';
@@ -19,7 +18,7 @@ import { SlideWebUI2 } from './slides/SlideWebUI2';
 import { SlideStandaloneV1 } from './slides/SlideStandaloneV1';
 import { SlideStandaloneV2 } from './slides/SlideStandaloneV2';
 import { SlideTestsOverview } from './slides/SlideTestsOverview';
-import { SlideBugs } from './slides/SlideBugs';
+import { SlideBugs1, SlideBugs2 } from './slides/SlideBugs';
 import { SlideWhySoLong } from './slides/SlideWhySoLong';
 import { SlideResults } from './slides/SlideResults';
 import { SlidePlans } from './slides/SlidePlans';
@@ -62,10 +61,12 @@ export function Presentation() {
       >
         <SlideTitle />
         <SlideParticipants />
-        <SlideTOC />
+        <SlideTOC1 />
+        <SlideTOC2 />
         <SlideProposal />
         <SlideModel />
-        <SlideContractTimeline />
+        <SlideContractTimeline1 />
+        <SlideContractTimeline2 />
         <SlideContractVersions />
         <SlideUIOverview />
         <SlideSnaps />
@@ -74,7 +75,8 @@ export function Presentation() {
         <SlideStandaloneV1 />
         <SlideStandaloneV2 />
         <SlideTestsOverview />
-        <SlideBugs />
+        <SlideBugs1 />
+        <SlideBugs2 />
         <SlideWhySoLong />
         <SlideResults />
         <SlidePlans />
